@@ -178,7 +178,7 @@ const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
         _gameTimeNum--;
         _gameStartTime++;
         if (mode === MODE_NORMAL && _gameTimeNum <= 0) {
-            GameTimeLayer.innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;时间到！';
+            GameTimeLayer.innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;时间♂Door！';
             gameOver();
             GameLayerBG.className += ' flash';
             createjs.Sound.play("end");
@@ -441,11 +441,12 @@ const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
             SubmitResults();
         }
 
-        if (cps <= 5) return '试着好好练一下？';
-        if (cps <= 8) return 'TCL';
-        if (cps <= 10)  return 'TQL';
-        if (cps <= 15) return '您';
-        return '人？';
+        if (score <= 49) return '告诫の心';
+        if (score <= 99) return '有点骚♂';
+        if (score <= 149)  return '赞美の心';
+        if (score <= 199) return 'Boy♂Next♂Door';
+        if (score <= 350) return 'Dungeon♂Master;
+        return '裆♂针';
     }
 
     function toStr(obj) {
